@@ -2,9 +2,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useEffect } from "react";
 import { GluestackUIProvider } from "@gluestack-ui/themed";
 import { config } from "@gluestack-ui/config";
-import { Provider } from "react-redux";
 import * as Location from "expo-location";
 import { TabsNavigation } from "../navigation/tabNavigation";
+import { Provider } from "react-redux";
 
 // utils
 import { getErrorMessage } from "../utils/getErrorMessage";
