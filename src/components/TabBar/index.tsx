@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { View, Text } from "react-native";
 import { useLinkBuilder, useTheme } from "@react-navigation/native";
 import { PlatformPressable } from "@react-navigation/elements";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -7,6 +6,7 @@ import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 
 // styles
 import styles from "./styles";
+import { Text, View } from "@gluestack-ui/themed";
 
 export const TabBar: FC<BottomTabBarProps> = ({
   state,
@@ -55,7 +55,10 @@ export const TabBar: FC<BottomTabBarProps> = ({
             onLongPress={onLongPress}
             style={styles.button}
           >
-            <Text style={{ color: isFocused ? colors.primary : colors.text }}>
+            <Text
+              fontSize={18}
+              style={{ color: isFocused ? colors.primary : colors.text }}
+            >
               {label}
             </Text>
           </PlatformPressable>
