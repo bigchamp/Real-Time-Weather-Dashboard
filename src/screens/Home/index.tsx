@@ -64,7 +64,11 @@ const WeatherApp = () => {
   useEffect(() => {
     const getWeatherData = async () => {
       try {
-        await Location.requestForegroundPermissionsAsync();
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== "granted") {
+          alert("Permission to access location was denied");
+        }
+
         let latitude;
         let longitude;
 
